@@ -1,8 +1,8 @@
-﻿int m = Input("Введите m: ");
-int n = Input("Введите n: ");
-int p = Input("Введите p: ");
+﻿int size1 = Input("Введите размерность 1 : ");
+int size2 = Input("Введите размерность 2 : ");
+int size3 = Input("Введите размерность 3 : ");
 
-int[,,] numbers = new int[m, n, p];
+int[,,] numbers = new int[size1, size2, size3];
 FillArray(numbers);
 PrintArray(numbers);
 
@@ -20,7 +20,7 @@ void PrintArray (int[,,] array)
     {
       for (int k = 0; k < array.GetLength(2); k++)
       {
-        Console.Write( $"{array[i,j,k]} [{i},{j},{k}]; ");
+        Console.Write( $"[{i},{j},{k}] {array[i,j,k]}; ");
       }
       Console.WriteLine();
     }
